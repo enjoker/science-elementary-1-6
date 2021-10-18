@@ -349,7 +349,7 @@ const testScreen = ({navigation, route}) => {
                             <ImageModal
                               resizeMode="contain"
                               imageBackgroundColor="#ffffff"
-                              style={{width: 50, height: 50}}
+                              style={{width: 100, height: 100}}
                               source={{uri:
                                 'https://api.test.schoolcare.app/getImg/getUploadFile?name=' +
                                 (questionDetails[currentQuestion].examPicQuestion).substr(8)
