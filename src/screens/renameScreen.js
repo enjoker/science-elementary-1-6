@@ -29,7 +29,7 @@ const renameScreen = ({ navigation }) => {
       <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
          <ImageBackground
             style={{ flex: 1, paddingHorizontal: 15 }}
-            source={require('../assets/images/Bg-one.png')}>
+            source={require('../assets/images/bg.jpg')}>
             <View style={{ paddingVertical: 30, alignItems: 'center' }}>
                <Text style={[styles.textBold22, { color: '#fff' }]}>เปลี่ยนชื่อ</Text>
             </View>

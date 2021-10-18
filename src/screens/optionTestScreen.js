@@ -124,9 +124,9 @@ const optionTestScreen = ({navigation, route}) => {
         csgName == 'สอบปลายภาคเรียน' ||
         csgName == 'สอบปลายภาคเรียนที่ 1' ||
         csgName == 'สอบปลายภาคเรียนที่ 2' ||
-        csgName == 'ภาษาไทย-สอบปลายภาคเรียน' ||
-        csgName == 'ภาษาไทย-สอบปลายภาคเรียนที่ 1' ||
-        csgName == 'ภาษาไทย-สอบปลายภาคเรียนที่ 2'
+        csgName == 'วิทยาศาสตร์-สอบปลายภาคเรียน' ||
+        csgName == 'วิทยาศาสตร์-สอบปลายภาคเรียนที่ 1' ||
+        csgName == 'วิทยาศาสตร์-สอบปลายภาคเรียนที่ 2'
       ) {
         setshowLevel(false);
         setlevelSelected(3);
@@ -330,7 +330,7 @@ const optionTestScreen = ({navigation, route}) => {
     <SafeAreaView style={{flex: 1}}>
       <ImageBackground
         style={{flex: 1}}
-        source={require('../assets/images/Bg-one.png')}>
+        source={require('../assets/images/bg.jpg')}>
         <View
           style={{
             padding: 15,
