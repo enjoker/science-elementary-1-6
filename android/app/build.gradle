@@ -129,7 +129,7 @@ android {
         applicationId "com.tncclever.science_elementary_1_6"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 3
+        versionCode 1
         versionName "1.0.0"
     }
     splits {

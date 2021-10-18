@@ -33,7 +33,7 @@ const homeScreen = ({ navigation }) => {
       },
       {
         name: 'ป.2',
-        code: '#1FA246',
+        code: '#ec6161',
         grade: 35,
       },
       {
@@ -48,7 +48,7 @@ const homeScreen = ({ navigation }) => {
       },
       {
         name: 'ป.5',
-        code: '#FF4E4E',
+        code: '#28b786',
         grade: 38,
       },
       {
@@ -60,7 +60,7 @@ const homeScreen = ({ navigation }) => {
     const gradeHandler = async classSelected => {
       let action;
       if (classSelected !== 0) {
-        action = subGradeActions.getSub('8', classSelected);
+        action = subGradeActions.getSub('2', classSelected);
         try {
           await dispatch(action);
           navigation.navigate('type', {});
@@ -74,7 +74,7 @@ const homeScreen = ({ navigation }) => {
     return (
       <View style={{ flex: 1, justifyContent: 'flex-start' }}>
         <Text style={[styles.textMedium34, { textAlign: 'center', color: '#FFFFFF' }]}>
-          ภาษาไทย
+          วิทยาศาสตร์
         </Text>
         <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}>
           <FlatGrid
@@ -126,7 +126,7 @@ const homeScreen = ({ navigation }) => {
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground
         style={{ flex: 1 }}
-        source={require('../assets/images/Bg-one.png')}>
+        source={require('../assets/images/bg.jpg')}>
         <View
           style={{
             padding: 15,

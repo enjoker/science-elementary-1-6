@@ -265,7 +265,7 @@ const testScreen = ({navigation, route}) => {
     <SafeAreaView style={{flex: 1}}>
       <ImageBackground
         style={{flex: 1}}
-        source={require('../assets/images/Bg-one.png')}>
+        source={require('../assets/images/bg.jpg')}>
         <View
           style={{
             padding: 15,
