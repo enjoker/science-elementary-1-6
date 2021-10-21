@@ -39,7 +39,6 @@ const testScreen = ({navigation, route}) => {
   const [isConfirmExamVisible, setConfirmExamVisible] = useState(false);
   const [isIncompleteVisible, setIncompleteVisible] = useState(false);
   const [showButtonSendExam, setshowButtonSendExam] = useState(false);
-  const [numberTest, setnumberTest] = useState();
 
   const findChoice = item => {
     let choice = null;
@@ -184,7 +183,7 @@ const testScreen = ({navigation, route}) => {
   };
   const warpExam = async () => {
     let test = [];
-    let yoyo = 0;
+
     for (let k = 0; k < questionDetails.length; k++) {
       //console.log(choiceSelected);
       choiceSelected.sort((a, b) => (a.questionId > b.questionId ? 1 : -1));
@@ -208,8 +207,6 @@ const testScreen = ({navigation, route}) => {
     if (choiceUnAnswered[0].choiceValue == false) {
       //console.log(choiceUnAnswered[0].questionId);
       setcurrentQuestion(choiceUnAnswered[0].questionId);
-      yoyo = choiceUnAnswered[1].questionId;
-      setnumberTest(yoyo);
     }
     setshowButtonSendExam(true);
   };
@@ -218,7 +215,7 @@ const testScreen = ({navigation, route}) => {
     if (showButtonSendExam == true) {
       warpExam();
     }
-  }, [choiceUnAnswered, choiceSelected, numberTest]);
+  }, [choiceUnAnswered, choiceSelected]);
 
   useEffect(() => {
     findIndexChoice();
@@ -350,9 +347,12 @@ const testScreen = ({navigation, route}) => {
                               resizeMode="contain"
                               imageBackgroundColor="#ffffff"
                               style={{width: 100, height: 100}}
-                              source={{uri:
-                                'https://api.test.schoolcare.app/getImg/getUploadFile?name=' +
-                                (questionDetails[currentQuestion].examPicQuestion).substr(8)
+                              source={{
+                                uri:
+                                  'https://api.test.schoolcare.app/getImg/getUploadFile?name=' +
+                                  questionDetails[
+                                    currentQuestion
+                                  ].examPicQuestion.substr(8),
                               }}
                             />
                           </View>
@@ -487,7 +487,7 @@ const testScreen = ({navigation, route}) => {
                         </TouchableOpacity>
                       </View>
                     ) : null
-                  ) : (
+                  ) : showButtonSendExam ? (
                     <View style={{alignItems: 'center'}}>
                       <TouchableOpacity
                         style={{marginTop: 10}}
@@ -503,7 +503,7 @@ const testScreen = ({navigation, route}) => {
                         </View>
                       </TouchableOpacity>
                     </View>
-                  )}
+                  ) : null}
                 </ScrollView>
               </View>
             </View>
