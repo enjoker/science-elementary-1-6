@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 import styles from '../styles/style';
 import { Input, Button } from 'react-native-elements';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+// import Ads
+import BannerAds from '../components/bannerAds';
 
 const renameScreen = ({ navigation }) => {
    const [name, setname] = useState()
