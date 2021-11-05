@@ -33,12 +33,13 @@ const typeScreen = ({ navigation }) => {
       '#B13AFA',
     ]);
     useEffect(() => {
+      if(SubGradeDetail.length != 0){
       let test = [];
       let dontUse = [];
-      let dataLength = SubGradeDetail.length
-      for (let k = 0; k < dataLength; k++) {   
-        let value = SubGradeDetail.splice(0, 1);   
-        if (value != '') {        
+      let dataLength = SubGradeDetail.length;
+      for (let k = 0; k < dataLength; k++) {
+        let value = SubGradeDetail.splice(0, 1);
+        if (value != '') {
           if (
             value[0].csg_name == 'test' ||
             value[0].csg_name == 'test1' ||
@@ -65,8 +66,12 @@ const typeScreen = ({ navigation }) => {
       }
       //SubGradeDetail.push(test.concat(dontUse))
       setnewSubGradeDetail(test);
-    }, [SubGradeDetail]);
-  
+    }else{
+      Alert.alert('แจ้งเตือน', 'ระดับชั้นนี้ยังไม่มีข้อสอบ', [
+        { text: 'ยืนยัน', onPress: () => navigation.navigate('home') },
+      ]);
+    }
+    }, [SubGradeDetail]);  
 
     return (
       <View>
