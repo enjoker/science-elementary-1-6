@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, SafeAreaView, ImageBackground } from 'react-native';
-import { useSelector } from 'react-redux';
+import { View, Text, SafeAreaView, ImageBackground } from 'react-native';
 import styles from '../styles/style';
 import { Input, Button } from 'react-native-elements';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+
 // import Ads
 import BannerAds from '../components/bannerAds';
 
@@ -61,9 +61,7 @@ const renameScreen = ({ navigation }) => {
                onPress={saveName}
             />
          </ImageBackground>
-         <View style={{ backgroundColor: '#EEEEEE', height: 50, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Ads Area</Text>
-         </View>
+         <BannerAds />
       </SafeAreaView>
    );
 }
